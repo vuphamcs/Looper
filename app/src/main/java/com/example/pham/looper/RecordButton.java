@@ -50,9 +50,12 @@ class RecordButton extends Button {
     private void startRecording() {
         mRecorder = new MediaRecorder();
         mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        mRecorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4);
+        mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
+        //mRecorder.setAudioEncoder(MediaRecorder.getAudioSourceMax());
+        mRecorder.setAudioEncodingBitRate(16);
+        mRecorder.setAudioSamplingRate(44100);
         mRecorder.setOutputFile(mFilename);
-        mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
 
         try {
             mRecorder.prepare();
