@@ -1,4 +1,4 @@
-package com.example.pham.looper;
+package com.pham.looper;
 
 import android.os.Bundle;
 import android.os.Environment;

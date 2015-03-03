@@ -1,4 +1,4 @@
-package com.example.pham.looper;
+package com.pham.looper;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

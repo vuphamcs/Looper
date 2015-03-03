@@ -1,4 +1,4 @@
-package com.example.pham.looper;
+package com.pham.looper;
 
 import android.content.Context;
 import android.media.MediaPlayer;
@@ -11,7 +11,7 @@ import android.widget.Button;
 import java.io.IOException;
 import java.util.ArrayList;
 
-class PlayButton extends Button {
+public class PlayButton extends Button {
     static ArrayList<PlayButton> playButtons = new ArrayList<PlayButton>();
 
     private static final String LOG_TAG = "PlayButton";

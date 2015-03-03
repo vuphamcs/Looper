@@ -1,4 +1,4 @@
-package com.example.pham.looper;
+package com.pham.looper;
 
 import java.io.File;
 import java.io.IOException;

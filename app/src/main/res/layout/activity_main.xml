@@ -28,16 +28,16 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <com.example.pham.looper.RecordButton
+        <com.pham.looper.RecordButton
             android:background="@drawable/red_button"
             style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            class="com.example.pham.looper.RecordButton"
+            class="com.pham.looper.RecordButton"
             android:id="@+id/recordB1"
             android:layout_weight="1" />
 
-        <com.example.pham.looper.PlayButton
+        <com.pham.looper.PlayButton
             android:background="@drawable/green_button"
             style="@style/button_text"
             android:layout_width="fill_parent"
@@ -52,21 +52,21 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <com.example.pham.looper.RecordButton
+        <com.pham.looper.RecordButton
             android:background="@drawable/red_button"
             style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            class="com.example.pham.looper.RecordButton"
+            class="com.pham.looper.RecordButton"
             android:id="@+id/recordB2"
             android:layout_weight="1" />
 
-        <com.example.pham.looper.PlayButton
+        <com.pham.looper.PlayButton
             android:background="@drawable/green_button"
             style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            class="com.example.pham.looper.PlayButton"
+            class="com.pham.looper.PlayButton"
             android:id="@+id/playB2"
             android:layout_weight="1" />
     </LinearLayout>
@@ -76,21 +76,21 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <com.example.pham.looper.RecordButton
+        <com.pham.looper.RecordButton
             android:background="@drawable/red_button"
             style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            class="com.example.pham.looper.RecordButton"
+            class="com.pham.looper.RecordButton"
             android:id="@+id/recordB3"
             android:layout_weight="1" />
 
-        <com.example.pham.looper.PlayButton
+        <com.pham.looper.PlayButton
             android:background="@drawable/green_button"
             style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            class="com.example.pham.looper.PlayButton"
+            class="com.pham.looper.PlayButton"
             android:id="@+id/playB3"
             android:layout_weight="1" />
     </LinearLayout>
@@ -100,21 +100,21 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <com.example.pham.looper.RecordButton
+        <com.pham.looper.RecordButton
             android:background="@drawable/red_button"
             style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            class="com.example.pham.looper.RecordButton"
+            class="com.pham.looper.RecordButton"
             android:id="@+id/recordB4"
             android:layout_weight="1" />
 
-        <com.example.pham.looper.PlayButton
+        <com.pham.looper.PlayButton
             android:background="@drawable/green_button"
             style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            class="com.example.pham.looper.PlayButton"
+            class="com.pham.looper.PlayButton"
             android:id="@+id/playB4"
             android:layout_weight="1" />
     </LinearLayout>
@@ -124,21 +124,21 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <com.example.pham.looper.RecordButton
+        <com.pham.looper.RecordButton
             android:background="@drawable/red_button"
             style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            class="com.example.pham.looper.RecordButton"
+            class="com.pham.looper.RecordButton"
             android:id="@+id/recordB5"
             android:layout_weight="1" />
 
-        <com.example.pham.looper.PlayButton
+        <com.pham.looper.PlayButton
             android:background="@drawable/green_button"
             style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            class="com.example.pham.looper.PlayButton"
+            class="com.pham.looper.PlayButton"
             android:id="@+id/playB5"
             android:layout_weight="1" />
     </LinearLayout>

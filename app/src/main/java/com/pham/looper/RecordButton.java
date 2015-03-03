@@ -1,4 +1,4 @@
-package com.example.pham.looper;
+package com.pham.looper;
 
 import android.content.Context;
 import android.os.Environment;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * Created by Pham on 3/2/15.
  */
 
-class RecordButton extends Button {
+public class RecordButton extends Button {
     static ArrayList<RecordButton> recordButtons = new ArrayList<RecordButton>();
 
     private static final String LOG_TAG = "RecordButton";
