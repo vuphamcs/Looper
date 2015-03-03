@@ -2,6 +2,7 @@ package com.example.pham.looper;
 
 import android.content.Context;
 import android.media.MediaPlayer;
+import android.os.Environment;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -11,6 +12,9 @@ import java.io.IOException;
 
 class PlayButton extends Button {
     private static final String LOG_TAG = "PlayButton";
+    private static final String external_storage_path = Environment.getExternalStorageDirectory().getAbsolutePath();
+    private static int count = 0;
+    private int id;
     MediaPlayer mPlayer;
     boolean mStartPlaying;
     OnClickListener clicker = new OnClickListener() {
@@ -26,7 +30,8 @@ class PlayButton extends Button {
         setOnClickListener(clicker);
         mPlayer = null;
         mStartPlaying = true;
-        mFilename = null;
+        id = ++count;
+        mFilename = external_storage_path + "/loop_" + id;
     }
 
     private void onPlay(boolean start) {

@@ -8,6 +8,23 @@
 
     <LinearLayout
         android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Looper"
+            android:id="@+id/textView"
+            android:textColor="#FFFFFF"
+            android:textSize="50dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
@@ -75,6 +92,54 @@
             android:layout_height="wrap_content"
             class="com.example.pham.looper.PlayButton"
             android:id="@+id/playB3"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.pham.looper.RecordButton
+            android:background="@drawable/red_button"
+            style="@style/button_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            class="com.example.pham.looper.RecordButton"
+            android:id="@+id/recordB4"
+            android:layout_weight="1" />
+
+        <com.example.pham.looper.PlayButton
+            android:background="@drawable/green_button"
+            style="@style/button_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            class="com.example.pham.looper.PlayButton"
+            android:id="@+id/playB4"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <com.example.pham.looper.RecordButton
+            android:background="@drawable/red_button"
+            style="@style/button_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            class="com.example.pham.looper.RecordButton"
+            android:id="@+id/recordB5"
+            android:layout_weight="1" />
+
+        <com.example.pham.looper.PlayButton
+            android:background="@drawable/green_button"
+            style="@style/button_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            class="com.example.pham.looper.PlayButton"
+            android:id="@+id/playB5"
             android:layout_weight="1" />
     </LinearLayout>
 </LinearLayout>
