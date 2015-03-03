@@ -9,20 +9,28 @@ import android.view.View;
 import android.widget.Button;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 class PlayButton extends Button {
+    static ArrayList<PlayButton> playButtons = new ArrayList<PlayButton>();
+
     private static final String LOG_TAG = "PlayButton";
     private static final String external_storage_path = Environment.getExternalStorageDirectory().getAbsolutePath();
+
     private static int count = 0;
+    private static boolean startPlayingAll = true;
+
     private int id;
+    private boolean mStartPlaying;
+    private String mFilename;
+
     MediaPlayer mPlayer;
-    boolean mStartPlaying;
+
     OnClickListener clicker = new OnClickListener() {
         public void onClick(View v) {
             onPlay(mStartPlaying);
         }
     };
-    String mFilename;
 
     public PlayButton(Context ctx, AttributeSet attrs) {
         super(ctx, attrs);
@@ -31,18 +39,15 @@ class PlayButton extends Button {
         mPlayer = null;
         mStartPlaying = true;
         id = ++count;
-        mFilename = external_storage_path + "/loop_" + id;
+        mFilename = external_storage_path + "/loop_" + id + ".wav";
     }
 
     private void onPlay(boolean start) {
         if (start) {
             startPlaying();
-            setText("Stop playing");
         } else {
             stopPlaying();
-            setText("Start playing");
         }
-        mStartPlaying = !mStartPlaying;
     }
 
     private void startPlaying() {
@@ -55,10 +60,33 @@ class PlayButton extends Button {
         } catch (IOException e) {
             Log.e(LOG_TAG, "prepare() failed");
         }
+        mStartPlaying = !mStartPlaying;
+        setText("Stop playing");
     }
 
     private void stopPlaying() {
         mPlayer.release();
         mPlayer = null;
+        mStartPlaying = !mStartPlaying;
+        setText("Start playing");
+    }
+
+    public static void playAll() {
+        if (startPlayingAll) {
+            for (PlayButton rb : playButtons) {
+                if (!rb.mStartPlaying) {
+                    rb.stopPlaying();
+                }
+                rb.startPlaying();
+            }
+        } else {
+            for (PlayButton rb : playButtons) {
+                if (!rb.mStartPlaying) {
+                    rb.stopPlaying();
+                }
+            }
+        }
+
+        startPlayingAll = !startPlayingAll;
     }
 }
