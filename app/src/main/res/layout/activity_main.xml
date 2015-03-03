@@ -12,6 +12,8 @@
         android:layout_height="wrap_content">
 
         <com.example.pham.looper.RecordButton
+            android:background="@drawable/red_button"
+            style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             class="com.example.pham.looper.RecordButton"
@@ -19,6 +21,8 @@
             android:layout_weight="1" />
 
         <com.example.pham.looper.PlayButton
+            android:background="@drawable/green_button"
+            style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             class="PlayButton"
@@ -32,6 +36,8 @@
         android:layout_height="wrap_content">
 
         <com.example.pham.looper.RecordButton
+            android:background="@drawable/red_button"
+            style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             class="com.example.pham.looper.RecordButton"
@@ -39,6 +45,8 @@
             android:layout_weight="1" />
 
         <com.example.pham.looper.PlayButton
+            android:background="@drawable/green_button"
+            style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             class="com.example.pham.looper.PlayButton"
@@ -52,6 +60,8 @@
         android:layout_height="wrap_content">
 
         <com.example.pham.looper.RecordButton
+            android:background="@drawable/red_button"
+            style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             class="com.example.pham.looper.RecordButton"
@@ -59,6 +69,8 @@
             android:layout_weight="1" />
 
         <com.example.pham.looper.PlayButton
+            android:background="@drawable/green_button"
+            style="@style/button_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             class="com.example.pham.looper.PlayButton"
