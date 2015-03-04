@@ -29,42 +29,44 @@ public class RecordButton extends Button {
     View.OnClickListener clicker = new OnClickListener() {
         public void onClick(View v) {
             onRecord(mStartRecording);
-            if (mStartRecording) {
-                setText("Stop recording");
-            } else {
-                setText("Start recording");
-            }
-            mStartRecording = !mStartRecording;
+
         }
     };
 
     public RecordButton(Context ctx, AttributeSet attrs) {
         super(ctx, attrs);
+
         setText("Start recording");
         setOnClickListener(clicker);
         mStartRecording = true;
-        extAudioRecorder = null;
+
         id = ++count;
         mFilename = external_storage_path + "/loop_" + id + ".wav";
+
+        extAudioRecorder = null;
     }
 
     private void onRecord(boolean start) {
-        if (start) {
+        if (start)
             startRecording();
-        } else {
+        else
             stopRecording();
-        }
+        mStartRecording = !mStartRecording;
     }
 
     private void startRecording() {
         extAudioRecorder = ExtAudioRecorder.getInstanse(false); // Uncompressed recording (WAV)
         extAudioRecorder.setOutputFile(mFilename);
         extAudioRecorder.prepare();
+
         extAudioRecorder.start();
+        setText("Stop recording");
+
     }
 
     private void stopRecording() {
         extAudioRecorder.stop();
         extAudioRecorder.release();
+        setText("Start recording");
     }
 }

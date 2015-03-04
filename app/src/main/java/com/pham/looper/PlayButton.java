@@ -34,20 +34,23 @@ public class PlayButton extends Button {
 
     public PlayButton(Context ctx, AttributeSet attrs) {
         super(ctx, attrs);
+
         setText("Start playing");
         setOnClickListener(clicker);
-        mPlayer = null;
+
         mStartPlaying = true;
+
         id = ++count;
         mFilename = external_storage_path + "/loop_" + id + ".wav";
+
+        mPlayer = null;
     }
 
     private void onPlay(boolean start) {
-        if (start) {
+        if (start)
             startPlaying();
-        } else {
+        else
             stopPlaying();
-        }
     }
 
     private void startPlaying() {
@@ -86,7 +89,6 @@ public class PlayButton extends Button {
                 }
             }
         }
-
         startPlayingAll = !startPlayingAll;
     }
 }

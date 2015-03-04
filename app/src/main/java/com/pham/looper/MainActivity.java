@@ -45,6 +45,7 @@ public class MainActivity extends ActionBarActivity {
 
         final Button playAllB = (Button) findViewById(R.id.playAllB);
         playAllB.setText("Play All");
+
         playAllB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
