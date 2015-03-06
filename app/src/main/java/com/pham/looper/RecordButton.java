@@ -21,10 +21,10 @@ public class RecordButton extends Button {
     private static int count = 0;
 
     private int id;
-    private boolean mStartRecording;
     private String mFilename;
 
     ExtAudioRecorder extAudioRecorder;
+    boolean mStartRecording;
 
     View.OnClickListener clicker = new OnClickListener() {
         public void onClick(View v) {
@@ -40,10 +40,15 @@ public class RecordButton extends Button {
         setOnClickListener(clicker);
         mStartRecording = true;
 
-        id = ++count;
+        id = ++count % 5;
         mFilename = external_storage_path + "/loop_" + id + ".wav";
 
         extAudioRecorder = null;
+
+        if(recordButtons.size() == 5)
+            recordButtons.clear();
+
+        recordButtons.add(this);
     }
 
     private void onRecord(boolean start) {
@@ -51,7 +56,6 @@ public class RecordButton extends Button {
             startRecording();
         else
             stopRecording();
-        mStartRecording = !mStartRecording;
     }
 
     private void startRecording() {
@@ -62,11 +66,15 @@ public class RecordButton extends Button {
         extAudioRecorder.start();
         setText("Stop recording");
 
+        mStartRecording = !mStartRecording;
+
+
     }
 
-    private void stopRecording() {
+    public void stopRecording() {
         extAudioRecorder.stop();
         extAudioRecorder.release();
+        mStartRecording = !mStartRecording;
         setText("Start recording");
     }
 }

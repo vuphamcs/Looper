@@ -21,10 +21,11 @@ public class PlayButton extends Button {
     private static boolean startPlayingAll = true;
 
     private int id;
-    private boolean mStartPlaying;
     private String mFilename;
 
     MediaPlayer mPlayer;
+    boolean mStartPlaying;
+
 
     OnClickListener clicker = new OnClickListener() {
         public void onClick(View v) {
@@ -40,10 +41,15 @@ public class PlayButton extends Button {
 
         mStartPlaying = true;
 
-        id = ++count;
+        id = ++count % 5;
         mFilename = external_storage_path + "/loop_" + id + ".wav";
 
         mPlayer = null;
+
+        if(playButtons.size() == 5)
+            playButtons.clear();
+
+            playButtons.add(this);
     }
 
     private void onPlay(boolean start) {
@@ -53,7 +59,7 @@ public class PlayButton extends Button {
             stopPlaying();
     }
 
-    private void startPlaying() {
+    public void startPlaying() {
         mPlayer = new MediaPlayer();
         try {
             mPlayer.setDataSource(mFilename);
@@ -67,7 +73,7 @@ public class PlayButton extends Button {
         setText("Stop playing");
     }
 
-    private void stopPlaying() {
+    public void stopPlaying() {
         mPlayer.release();
         mPlayer = null;
         mStartPlaying = !mStartPlaying;
